@@ -1,0 +1,269 @@
+/*import font for use in styling */
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');*
+
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Patrick Hand', sans-serif;
+}
+
+/*main body styling*/
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+  max-height: 100%;
+  background: #ffffff;
+}
+
+/*general styling for header position, font, etc.*/
+.header{
+  position: absolute;
+  width: 100%;
+  padding-right: 80px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffd101;
+  font-family: 'Patrick Hand', sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 1.5em;
+  Text-transform: uppercase;
+  letter-spacing: 1.75px;
+  z-index: 10000;
+}
+
+/* makes list flex containers and adjust them be center with space */
+.header ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+/* resizes logo */
+.header img {
+height: 100px;
+padding-top: 20px;
+}
+
+.menu {
+  text-decoration: none;
+  padding: 15px;
+  color: #ffd101;
+  border-radius: 20px;
+}
+
+/* sets hover effect for list items */
+.menu:hover {
+  background: #ffd101;
+  color: #50319b;
+}
+
+.sticky {
+  position: fixed;
+  font-size: 1.5em;
+  right: 0px;
+  top: -13px;
+  background: linear-gradient( to bottom, #1a0553, transparent);
+  z-index: 100000;
+}
+
+.stickyLogo {
+padding-top: 20px;
+}
+
+/* styling for parallax general section */
+section {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#0d0f4f, #50319b);
+}
+
+#att1 {
+  position: absolute;
+  color: #fff;
+  bottom: 10px;
+  right: 10px;
+  z-index: 10000;
+}
+
+/* adds the gradient border after the section styling above */
+section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, #1a0553, transparent);
+  z-index: 1000;
+}
+
+/* image styling for parallax */
+section img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+/* text styling for the "scroll to learn more" bit */
+section #text {
+  position: absolute;
+  color: #ffd301;
+  font-size: 10vw;
+  text-align: center;
+  line-height: 0.55em;
+}
+
+section #text span {
+  font-size: 0.50em;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
+/* #btn {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 30px;
+  background: #fff;
+  color: #ffd101;
+  font-size: 1.2em;
+  font-weight: 500;
+  letter-spacing: 2px;
+  border-radius: 40px;
+  transform: translateY(100px);
+} */
+
+/* styling for the text sections */
+.about {
+  position: relative;
+  padding: 100px;
+  background: #1a0553;
+}
+
+.about h2 {
+  font-size: 4em;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.about p {
+  font-size: 2em;
+  color: #fff;
+}
+
+.edu {
+  position: relative;
+  padding: 100px;
+  background: #B7AED5;
+  color: #000;
+  font-size: 1.5em;
+}
+
+.edu h2 {
+  font-size: 4em;
+  padding-bottom: 20px;
+}
+
+.edu h3 {
+  font-size: 2.75em;
+}
+
+.edu h4 {
+  list-style: square inside;
+}
+
+.edu p {
+  padding-left: 20px;
+}
+
+.edu ul li {
+  list-style: circle inside;
+  padding-left: 50px;
+}
+
+.contact {
+  position: relative;
+  padding: 100px;
+  background: #fff;
+  text-align: center;
+  color: #000;
+  font-size: 1.5em;
+}
+
+
+.warning {
+  position: relative;
+  padding: 100px;
+  background: #ffd301;
+  font-size: 2.5em;
+  text-align: center;
+  color: #000;
+  Text-align: center;
+}
+
+.warning h2 {
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#att2 {
+  position: absolute;
+  color: #000;
+  font-size: 0.5em;
+  bottom: 10px;
+  right: 10px;
+  z-index: 10000;
+}
+
+#taunt {
+  font-size: 0.6em;
+}
+
+#sign {
+  max-width: 20vw;
+  max-height: 20vh;
+  position: absolute;
+  left: 20px;
+  transition: transform 1s ease-in-out;
+}
+
+#sign:hover {
+  transform: rotate(360deg) translateZ(0);
+}
+
+.fun {
+  position: relative;
+  background: #61d2fe;
+  padding: 100px;
+  color: #000;
+  font-size: 1.5em;
+}
+
+.fun h2 {
+  font-size: 4em;
+}
+
+.fun h3 {
+  padding-top: 100px;
+}
+
+canvas {
+  border: 1px solid grey;
+  height: 200px;
+  display: block;
+  width: 40%;
+  background: white;
+}
